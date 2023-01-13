@@ -9,6 +9,7 @@ public class FPS_UI : MonoBehaviour
 
     private void Update()
     {
-        
+        //minimum fps of 30
+        fpsCounter.text = "" + 1 / Time.deltaTime;
     }
 }

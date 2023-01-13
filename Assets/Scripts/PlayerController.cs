@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
 	{
 		rotation = Input.GetAxisRaw("Horizontal");
+		
+		//use a virtual controller
+		
 	}
 
 	void FixedUpdate ()

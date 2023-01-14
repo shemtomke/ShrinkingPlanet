@@ -5,20 +5,21 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 10f;
 	public float rotationSpeed = 10f;
 
+	private Joystick joystick;
+
 	private float rotation;
 	private Rigidbody rb;
 
 	void Start ()
 	{
+		joystick = FindObjectOfType<Joystick>();
 		rb = GetComponent<Rigidbody>();
 	}
 
 	void Update ()
 	{
-		rotation = Input.GetAxisRaw("Horizontal");
-		
-		//use a virtual controller
-		
+		//use a joystick controller
+		rotation = joystick.Horizontal;
 	}
 
 	void FixedUpdate ()

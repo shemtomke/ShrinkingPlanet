@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class FPS_UI : MonoBehaviour
 {
+    int fps;
     public Text fpsCounter;
 
     private void Update()
     {
+        fps = (int)(1f / Time.unscaledDeltaTime);
         //minimum fps of 30
-        fpsCounter.text = "" + 1 / Time.deltaTime;
+        fpsCounter.text = "FPS : " + fps;
     }
 }

@@ -14,6 +14,7 @@ public class Meteor : FauxGravityBody {
 		Quaternion rot = Quaternion.LookRotation(transform.position.normalized);
 		rot *= Quaternion.Euler(90f, 0f, 0f);
 		Instantiate(explosion, col.contacts[0].point, rot);
+		StartShaking();
 
 		sphereCol.enabled = false;
 		trail.Stop(true, ParticleSystemStopBehavior.StopEmitting);

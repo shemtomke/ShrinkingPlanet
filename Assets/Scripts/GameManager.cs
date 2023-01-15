@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
 
-	public GameObject gameOverUI;
+	public GameObject gameOverUI, joystick;
 	public bool isGameOver = false;
 	void Awake ()
 	{
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	{
 		isGameOver = true;
 		gameOverUI.SetActive(true);
+		joystick.SetActive(false);
 	}
 
 	public void Restart ()
